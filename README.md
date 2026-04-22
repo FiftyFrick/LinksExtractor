@@ -43,11 +43,13 @@ stream
 embed
 file
 Eliminación de duplicados (Set)
+
 🔹 3. Crawling multi-nivel
 Navegación recursiva entre links
 Profundidad configurable (ej: 3 niveles)
 Control de URLs visitadas (anti-loop)
 Descubrimiento progresivo de contenido oculto
+
 🔹 4. Scraping dinámico (Puppeteer)
 Usa navegador real (Chrome)
 Ejecuta JavaScript de la página
@@ -56,12 +58,14 @@ esperar elementos (waitForSelector)
 interactuar con el DOM
 hacer clicks automáticos
 extraer contenido dinámico (data-dwn)
+
 🔹 5. Automatización de interacción
 Click automático en:
 botones de descarga
 servidores (li.se)
 Espera de cambios dinámicos en el DOM
 Extracción posterior de links reales
+
 🔹 6. Monitoreo de eventos
 Inyección de listener de clicks en el navegador
 Captura de:
@@ -70,11 +74,13 @@ texto
 clases
 href
 Logging en archivo (clicks.txt)
+
 🔹 7. API REST (Express)
 Endpoint GET / POST /extract
 Endpoint /extract-multi
 Procesamiento backend con Puppeteer
 Respuesta en JSON
+
 ⚙️ Tecnologías utilizadas
 Node.js
 axios → requests HTTP
@@ -84,18 +90,24 @@ express → API REST
 fs / fs-extra → manejo de archivos
 tmp → archivos temporales
 clipboardy → copia al portapapeles
+
 📦 Instalación
 npm install axios cheerio puppeteer-core express fs-extra tmp clipboardy
+
 🖥️ Configuración
 
 ⚠️ Puppeteer requiere especificar el path de Chrome:
 
 const CHROME_PATH = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
+
 📡 Uso
+
 ▶️ Scraping básico
 node extractor.js "https://pagina.com"
+
 ▶️ Scraping dinámico
 node puppeteerExtractor.js "https://pagina.com"
+
 ▶️ API REST
 node server.js
 
@@ -103,14 +115,17 @@ Endpoints:
 
 GET
 /extract?url=https://pagina.com
+
 POST
 {
   "url": "https://pagina.com"
 }
+
 POST MULTI
 {
   "urls": ["url1", "url2"]
 }
+
 🧠 Técnicas implementadas
 Parsing DOM estático
 Scraping híbrido (estático + dinámico)
@@ -121,6 +136,7 @@ Automatización de UI
 Interceptación de eventos del navegador
 Deduplicación de datos
 Heurísticas de filtrado
+
 ⚠️ Limitaciones
 Algunas webs usan:
 protección anti-bots
@@ -128,6 +144,7 @@ tokens temporales
 captchas
 Puppeteer puede ser detectado en sitios avanzados
 Scraping dinámico consume más recursos
+
 🔮 Posibles mejoras
 Soporte para proxies
 Rotación de user-agent
