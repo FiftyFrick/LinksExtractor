@@ -1,18 +1,25 @@
 # LinksExtractor
-# 🚀 AnimeFLV Auto API Extractor
+# Auto API Extractor para AnimeFLV.one + jDonloader2 + Wach Folder
 
-Sistema automatizado de extracción de links de descarga para **animeflv.one** utilizando **Node.js**, **Puppeteer** y automatización integrada con **JDownloader2**.
+Sistema automatizado de extracción de links de descarga para **animeflv.one** utilizando **Node.js**, **Puppeteer** y automatización integrada con **JDownloader2** y su Extencion de **Wach Folder**.
 
 El objetivo principal de este proyecto es automatizar completamente la obtención de enlaces de descarga y enviarlos directamente al sistema *Watch Folder* de JDownloader2 mediante archivos `.crawljob`.
 
+# Rresumiendo en pocas palabras este script automatico te facilita los diferentes links de descargas (mega,1ficher,etc... )que te ofrece animeflv.one y te los guarda en la carpeta de jdonloader para que de manera automatica detecte los links y los capture en su lista de capturador de enlaces.
+
+
+si te ineresa saber mi motivacion y lo que aprendi intentando optimizar mi tiempo y el por que te dejo una brebe explicacion mas abajo 
+
 ---
 
-# 🧠 Historia del proyecto
+# Historia del proyecto
 
 Este proyecto comenzó como un simple scraper HTML utilizando:
 
 - Axios
 - Cheerio
+
+Axios y Cheerio son herramientas fundamentales en JavaScript/Node.js para el web scraping (extracción de datos web). Axios descarga el contenido HTML de una página web mediante peticiones HTTP, mientras que Cheerio analiza y manipula ese HTML, permitiendo seleccionar y extraer datos específicos con una sintaxis similar a jQuery
 
 Con el tiempo evolucionó hacia un sistema híbrido debido a que animeflv.one utiliza contenido dinámico generado mediante JavaScript.
 
