@@ -449,27 +449,27 @@ La arquitectura permite adaptarlo fácilmente a otros sitios modificando:
 
 - **scraping estático vs dinámico** 
 
-            (Antes no sabia lo que era un scraping y el parsing HTML )
+   (Antes no sabia lo que era un scraping y el parsing HTML )
 
 - **automatización real de navegador** 
 
-         (esto me parecio muy divertido y peligros si se mira con malicia hay que tener mucho cuidado con el Puppeteer)
+   (esto me parecio muy divertido y peligros si se mira con malicia hay que tener mucho cuidado con el Puppeteer)
 
 - **APIs REST** 
 
-         (la verdad es la 1ra vez que implemento la utilizacion de una API)
+   (la verdad es la 1ra vez que implemento la utilizacion de una API)
 
 - **ingeniería inversa web** 
 
-         (basicamente f12 de chrome para visualizar donde estan los datos que necesito)
+   (basicamente f12 de chrome para visualizar donde estan los datos que necesito)
 
 - **integración con software externo** 
 
-         (La exencion de wach folder de jdonloader me ayudo con esto y su escaneo de la carpeta donde se guardan los links)
+   (La exencion de wach folder de jdonloader me ayudo con esto y su escaneo de la carpeta donde se guardan los links)
 
 - **procesamiento automatizado de descargas** 
 
-         ( con esto me refiero a que intente darle a jdonloader todos los link en un unico Package aunque sin usar directamente la API de MyJdonloader el paquete de links se interpreta como quiere ya que el programa predeterminadamente tiene priorirar sobre el nombre del archivo y no la del paquete)
+   ( con esto me refiero a que intente darle a jdonloader todos los link en un unico Package aunque sin usar directamente la API de MyJdonloader el paquete de links se interpreta como quiere ya que el programa predeterminadamente tiene priorirar sobre el nombre del archivo y no la del paquete)
 
 ---
 
