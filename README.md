@@ -464,4 +464,5 @@ La arquitectura permite adaptarlo fácilmente a otros sitios modificando:
 ## 📄 Licencia
 
 Proyecto desarrollado con fines educativos y de automatización personal.
+
 No me hago responsable de la mala Utilizacion de este script y o su modificacion 
