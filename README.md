@@ -61,7 +61,7 @@ El usuario simplemente pega URLs de episodios y el sistema se encarga del resto.
 
 # ⚙️ Tecnologías utilizadas
 
-## 🔹 Lenguaje principal
+## Lenguaje principal
 
 - Node.js
 
@@ -69,7 +69,7 @@ El usuario simplemente pega URLs de episodios y el sistema se encarga del resto.
 
 # 📦 Dependencias
 
-## 🌐 Backend/API
+## Backend/API
 
 ### express
 Servidor API REST.
@@ -80,7 +80,7 @@ npm install express
 
 ---
 
-## 🤖 Automatización Web
+## Automatización Web
 
 ### puppeteer-core
 Control automatizado de Google Chrome.
@@ -91,7 +91,7 @@ npm install puppeteer-core
 
 ---
 
-## 🔓 CORS
+## CORS
 
 ### cors
 Permite conexiones entre frontend y backend.
@@ -121,7 +121,7 @@ El sistema está dividido en varios módulos funcionales.
 
 ---
 
-# 🔹 1. Auto instalador
+# 1. Auto instalador
 
 El proyecto verifica automáticamente:
 
@@ -143,7 +143,7 @@ Instalar automáticamente
 
 ---
 
-# 🔹 2. Frontend automático
+# 2. Frontend automático
 
 Si `index.html` no existe:
 
@@ -156,7 +156,7 @@ Si `index.html` no existe:
 
 ---
 
-# 🔹 3. Watch Folder Manager
+# 3. Watch Folder Manager
 
 El sistema verifica automáticamente:
 
@@ -171,7 +171,7 @@ Funciones:
 
 ---
 
-# 🔹 4. API REST
+# 4. API REST
 
 La aplicación crea un servidor Express.
 
@@ -179,7 +179,7 @@ La aplicación crea un servidor Express.
 
 ---
 
-## 🔹 GET `/ping`
+## GET `/ping`
 
 Verifica si la API está funcionando.
 
@@ -193,7 +193,7 @@ Verifica si la API está funcionando.
 
 ---
 
-## 🔹 POST `/extract-multi`
+## POST `/extract-multi`
 
 Procesa múltiples URLs.
 
@@ -210,7 +210,7 @@ Procesa múltiples URLs.
 
 ---
 
-# 🔹 5. Motor de scraping
+# 5. Motor de scraping
 
 El núcleo del sistema utiliza:
 
@@ -220,7 +220,7 @@ El núcleo del sistema utiliza:
 
 ---
 
-# 🔍 Funcionamiento interno
+#  Funcionamiento interno
 
 ## Flujo completo
 
@@ -252,7 +252,7 @@ JDownloader importa automáticamente
 
 ---
 
-# 🔹 6. Extracción `data-dwn`
+# 6. Extracción `data-dwn`
 
 AnimeFLV genera los links reales dinámicamente dentro de:
 
@@ -269,7 +269,7 @@ El sistema:
 
 ---
 
-# 🔹 7. Generador `.crawljob`
+# 7. Generador `.crawljob`
 
 El sistema convierte automáticamente los links en formato compatible con JDownloader2.
 
@@ -285,7 +285,7 @@ https://link3.com
 
 ---
 
-# 🔹 8. Integración con JDownloader2
+# 8. Integración con JDownloader2
 
 Los archivos `.crawljob` son enviados automáticamente a:
 
@@ -297,6 +297,11 @@ JDownloader2 detecta los archivos automáticamente e importa los enlaces.
 
 ---
 
+
+
+---
+
+
 # 🖥️ Requisitos
 
 - Node.js v18+
@@ -304,7 +309,9 @@ JDownloader2 detecta los archivos automáticamente e importa los enlaces.
 - JDownloader2
 - Windows
 
+
 ---
+
 
 # 🔧 Configuración
 
@@ -326,7 +333,7 @@ const WATCH_FOLDER = "C:\\JDownloader\\watch\\";
 
 # 📥 Instalación
 
-## 1️⃣ Clonar repositorio
+## 1. Clonar repositorio
 
 ```bash
 git clone 
@@ -335,7 +342,7 @@ git clone
 
 ---
 
-## 2️⃣ Ejecutar proyecto
+## 2. Ejecutar proyecto
 
 ```bash
 node AUTO-APIextractor_V3_4.js
@@ -344,6 +351,10 @@ node AUTO-APIextractor_V3_4.js
 El sistema instalará dependencias automáticamente.
 
 ---
+
+
+---
+
 
 # 🌐 Acceso
 
@@ -361,7 +372,11 @@ http://localhost:3000
 
 ---
 
-# 🔥 Características principales
+---
+
+
+
+# Características principales
 
 ✅ Scraping dinámico  
 ✅ Automatización completa  
@@ -376,7 +391,7 @@ http://localhost:3000
 
 ---
 
-# 🧠 Técnicas utilizadas
+# Técnicas utilizadas
 
 - Web Scraping
 - DOM Parsing
@@ -390,7 +405,7 @@ http://localhost:3000
 
 ---
 
-# 🔄 Adaptabilidad
+# Conclucion.
 
 Aunque el sistema fue diseñado específicamente para:
 
@@ -406,7 +421,7 @@ La arquitectura permite adaptarlo fácilmente a otros sitios modificando:
 
 ---
 
-# ⚠️ Limitaciones
+# Problematicas
 
 - Dependencia de la estructura actual de animeflv.one
 - Cambios en el DOM pueden romper el scraper
@@ -415,7 +430,7 @@ La arquitectura permite adaptarlo fácilmente a otros sitios modificando:
 
 ---
 
-# 🔮 Posibles mejoras futuras
+# Posibles mejoras que Podria abordar en algun momento... (aunque asi como esta cumple con lo que necesito)
 
 - Integración directa con API MyJDownloader
 - Docker
@@ -428,19 +443,25 @@ La arquitectura permite adaptarlo fácilmente a otros sitios modificando:
 
 ---
 
-# 📚 Aprendizajes del proyecto
+# Con este Proyecto aprendi lo sigiente:
 
-Este proyecto permitió experimentar con:
+**Este proyecto me permitió experimentar con:**
 
-- scraping estático vs dinámico
-- automatización real de navegador
-- APIs REST
-- ingeniería inversa web
-- integración con software externo
-- procesamiento automatizado de descargas
+- **scraping estático vs dinámico** (Antes no sabia lo que era un scraping y el parsing HTML )
+
+- **automatización real de navegador** (esto me parecio muy divertido y peligros si se mira con malicia hay que tener mucho cuidado con el Puppeteer)
+
+- **APIs REST** (la verdad es la 1ra vez que implemento la utilizacion de una API)
+
+- **ingeniería inversa web** (basicamente f12 de chrome para visualizar donde estan los datos que necesito)
+
+- **integración con software externo** (La exencion de wach folder de jdonloader me ayudo con esto y su escaneo de la carpeta donde se guardan los links)
+
+- **procesamiento automatizado de descargas** ( con esto me refiero a que intente darle a jdonloader todos los link en un unico Package aunque sin usar directamente la API de MyJdonloader el paquete de links se interpreta como quiere ya que el programa predeterminadamente tiene priorirar sobre el nombre del archivo y no la del paquete)
 
 ---
 
-# 📄 Licencia
+## 📄 Licencia
 
 Proyecto desarrollado con fines educativos y de automatización personal.
+No me hago responsable de la mala Utilizacion de este script y o su modificacion 
