@@ -469,7 +469,7 @@ La arquitectura permite adaptarlo fácilmente a otros sitios modificando:
 
 - **procesamiento automatizado de descargas** 
 
-   ( con esto me refiero a que intente darle a jdonloader todos los link en un unico Package aunque sin usar directamente la API de MyJdonloader el paquete de links se interpreta como quiere ya que el programa predeterminadamente tiene priorirar sobre el nombre del archivo y no la del paquete)
+   ( con esto me refiero a que intente darle a jdonloader todos los link en un unico Package aunque sin usar directamente la API de MyJdonloader el paquete de links se interpreta como quiere, ya que el programa predeterminadamente tiende a priorizar el nombre del archivo y no el nombre del paquete)
 
 ---
 
