@@ -55,7 +55,7 @@ Luego abrir el archivo index.html:
 
 # Paso 3 — Pegar URLs
 
-Copiar y pegar las URLs de animeflv.one dentro del textarea.
+Copiar y pegar las URLs de animeflv.one dentro del textarea y le damos al boton Extraer.
 
 Ejemplo:
 
