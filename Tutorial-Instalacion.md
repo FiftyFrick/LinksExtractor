@@ -22,10 +22,10 @@ npm -v
 # Paso 1 — Preparar Jdonloader 
 
 ingresamos a extenciones de jdonloader
-![Paso ](img/config01.jpg)
+![Paso ](img/conf01.jpg)
 
 configuramos la ubicacion de la carpeta wachfolder
-![Paso](img/config02.jpg)
+![Paso](img/conf02.jpg)
 
 
 # Paso 2 
