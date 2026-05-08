@@ -4,7 +4,7 @@ Guía rápida para utilizar el sistema paso a paso.
 
 ---
 
-## 0 Instalar Node.js
+# 0 Instalar Node.js
 
 Este proyecto requiere Node.js para funcionar.
 
