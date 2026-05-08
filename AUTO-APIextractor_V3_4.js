@@ -35,70 +35,240 @@ if (!fs.existsSync(indexPath)) {
 <head>
 <meta charset="UTF-8">
 <title>Extractor Links</title>
+
 <style>
-body { font-family: Arial; background: #111; color: #eee; padding: 20px; }
-textarea { width: 100%; height: 120px; }
-button { padding: 10px; margin: 5px; }
-#status { font-weight: bold; margin-bottom: 10px; }
+body {
+    font-family: Arial;
+    background: #111;
+    color: #eee;
+    padding: 20px;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+textarea {
+    width: 100%;
+    height: 120px;
+    background: #222;
+    color: #eee;
+    border: 1px solid #444;
+    padding: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px 5px 5px 0;
+    cursor: pointer;
+    border: none;
+    background: #333;
+    color: #eee;
+}
+
+button:hover {
+    background: #555;
+}
+
+.result {
+    background: #222;
+    padding: 10px;
+    margin-top: 10px;
+    border-left: 4px solid #4caf50;
+}
+
+.error-box {
+    border-left: 4px solid #f44336;
+}
+
+#status {
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
 .ok { color: #4caf50; }
 .error { color: #f44336; }
 .loading { color: #ff9800; }
 </style>
+
 </head>
 <body>
 
 <div id="status">🟡 Probando conexión...</div>
 
-<h1>🎬 Extractor de Links</h1>
+<h1>🎬 Extractor de Links de Descargas</h1>
 
-<textarea id="urls"></textarea>
+<h2>
+  Copia tus links desde esta página:
+  <a href="https://vww.animeflv.one/" target="_blank">
+    https://vww.animeflv.one/
+  </a>
+</h2>
 
-<button onclick="extract()">Extraer</button>
+<br>
+
+<p>Por ej: ( https://vww.animeflv.one/ver/one-piece-1 )</p>
+
+<textarea id="urls" placeholder="Pegá URLs (una por línea)"></textarea>
+
+<br>
+
+<button onclick="extract()">🔍 Extraer</button>
+<button onclick="send()">📥 Enviar a JD</button>
 
 <div id="output"></div>
 
 <script>
+
 const API = "http://localhost:3000";
 
+let lastResults = [];
+
+//////////////////////////////////////////////////////
+// 🔹 EXTRAER
+//////////////////////////////////////////////////////
+
 async function extract() {
-    const urls = document.getElementById("urls").value.split("\\n");
-    const res = await fetch(API + "/extract-multi", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ urls })
-    });
 
-    const data = await res.json();
-    document.getElementById("output").innerText = JSON.stringify(data, null, 2);
-}
+    const urls = document.getElementById("urls").value
+        .split("\\n")
+        .map(u => u.trim())
+        .filter(u => u);
 
-async function checkAPI() {
-    const status = document.getElementById("status");
+    if (!urls.length) {
+        alert("⚠️ Pegá al menos una URL");
+        return;
+    }
+
+    const out = document.getElementById("output");
+
+    out.innerHTML = "⏳ Procesando...";
 
     try {
+
+        const res = await fetch(API + "/extract-multi", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ urls })
+        });
+
+        const data = await res.json();
+
+        lastResults = data;
+
+        render(data);
+
+    } catch (err) {
+
+        out.innerHTML = "❌ Error conectando con la API";
+
+    }
+
+}
+
+//////////////////////////////////////////////////////
+// 🔹 RENDER
+//////////////////////////////////////////////////////
+
+function render(data) {
+
+    const out = document.getElementById("output");
+
+    out.innerHTML = "";
+
+    data.forEach(item => {
+
+        const div = document.createElement("div");
+
+        if (item.error) {
+
+            div.className = "result error-box";
+
+            div.innerHTML = \`
+                <b>❌ Error</b><br>
+                \${item.url}<br>
+                \${item.detail || ""}
+            \`;
+
+        } else {
+
+            div.className = "result";
+
+            div.innerHTML = \`
+                <b>\${item.nombre}</b><br>
+                ✔ \${item.total} links<br>
+                📁 \${item.file}
+            \`;
+
+        }
+
+        out.appendChild(div);
+
+    });
+
+}
+
+//////////////////////////////////////////////////////
+// 🔹 SEND
+//////////////////////////////////////////////////////
+
+function send() {
+    alert("✔ Los links ya se envían automáticamente a JDownloader");
+}
+
+//////////////////////////////////////////////////////
+// 🔹 STATUS API
+//////////////////////////////////////////////////////
+
+async function checkAPI() {
+
+    const status = document.getElementById("status");
+
+    status.innerText = "🟡 Probando conexión...";
+    status.className = "loading";
+
+    try {
+
         const res = await fetch(API + "/ping");
 
         if (res.ok) {
-            status.innerText = "🟢 Conectado";
+
+            status.innerText = "🟢 Conectado a API";
             status.className = "ok";
-        } else throw new Error();
+
+        } else {
+
+            throw new Error();
+
+        }
 
     } catch {
-        status.innerText = "🔴 Desconectado";
+
+        status.innerText = "🔴 API desconectada";
         status.className = "error";
+
     }
+
 }
 
+// ejecutar al cargar
 checkAPI();
+
 setInterval(checkAPI, 5000);
+
 </script>
 
 </body>
 </html>`);
 
-    console.log("✅ index.html creado\n");
+    console.log("✅ index.html creado\\n");
+
 } else {
-    console.log("✔ index.html ya existe\n");
+
+    console.log("✔ index.html ya existe\\n");
+
 }
 
 
