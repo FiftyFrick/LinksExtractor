@@ -25,13 +25,13 @@ ingresamos a extenciones de jdonloader
 !(img/config01.jpg)
 
 configuramos la ubicacion de la carpeta wachfolder
-![Paso](img/config02.jpg)
+!(img/config02.jpg)
 
 
 # Paso 2 
 abrir la terminal Apretando Shift + Click derecho 
 
-![Paso](img/01.jpg)
+!(img/01.jpg)
 
 
 Iniciar el servidor:
@@ -39,17 +39,17 @@ Iniciar el servidor:
 ```bash
 node AUTO-APIextractor_V3_4.js
 ```
-![Paso](img/02.jpg)
+!(img/02.jpg)
 
 al darle enter ya tendriamos instalado el script 
-![Paso](img/03.jpg)
+!(img/03.jpg)
 
 
 ```text
 Luego abrir el archivo index.html:
 ```
 
-![Paso](img/04.jpg)
+!(img/04.jpg)
 
 ---
 
@@ -64,8 +64,8 @@ https://animeflv.one/ver/episodio-1
 https://animeflv.one/ver/episodio-2
 ```
 
-![Paso](img/05.jpg)
+!(img/05.jpg)
 
 luego de manera automatica se añaden al capturador de enlaces del JDonloader
 
-![Paso](img/06.jpg)
+!(img/06.jpg)
