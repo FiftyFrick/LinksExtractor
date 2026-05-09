@@ -10,6 +10,9 @@ El objetivo principal de este proyecto es automatizar completamente la obtenció
 
 si te ineresa saber mi motivacion y lo que aprendi intentando optimizar mi tiempo y el por que te dejo una brebe explicacion mas abajo 
 
+# instalacion y Guia de Usuario 
+
+!(Tutorial-Instalacion-Guia de Usuario.md)
 ---
 
 # Historia del proyecto
