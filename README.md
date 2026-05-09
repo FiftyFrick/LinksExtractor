@@ -12,7 +12,7 @@ si te ineresa saber mi motivacion y lo que aprendi intentando optimizar mi tiemp
 
 # instalacion y Guia de Usuario 
 
-!(Tutorial-Instalacion-Guia de Usuario.md)
+![tuto](Tutorial-Instalacion-Guia de Usuario.md)
 ---
 
 # Historia del proyecto
